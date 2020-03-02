@@ -1,0 +1,63 @@
+.candidates-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	gap: 4rem;
+}
+
+.candidate-card {
+	height: auto;
+	border-radius: 30px;
+	padding: 2rem;
+	background: #ebecf0;
+	box-shadow: 20px 20px 60px #c8c9cc, -20px -20px 60px #ffffff;
+}
+
+h2 {
+	margin: 0;
+	height: 60px;
+}
+
+.candidate-info {
+	display: grid;
+	min-height: 150px;
+	grid-template-columns: 3fr 1fr;
+	column-gap: 0.5rem;
+}
+
+.candidate-prof-info {
+	position: relative;
+}
+
+.cta {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 50px;
+	background: #ebecf0;
+	box-shadow: 6px 6px 14px #b5b6b9, -6px -6px 14px #ffffff;
+	padding: 0.5rem 1rem;
+}
+
+a {
+	text-decoration: none;
+	color: #001f3f;
+}
+
+a:visited {
+	color: #001f3f;
+}
+
+.green {
+	color: #66bb6a;
+}
+
+.candidate-base-info {
+	display: grid;
+	row-gap: 1rem;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}

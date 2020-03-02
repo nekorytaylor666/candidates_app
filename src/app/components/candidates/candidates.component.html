@@ -1,0 +1,27 @@
+<ul class="candidates-list">
+  <li
+    *ngFor="let candidate of candidates"
+    (click)="onSelect(candidate)"
+    class="candidate-card"
+  >
+    <div class="candidate-info">
+      <div class="candidate-base-info">
+        <h2>{{ candidate.name }}</h2>
+        <span
+          ><strong>Language: {{ candidate.mainLang }}</strong></span
+        >
+        <span>Age: {{ candidate.age }}</span>
+      </div>
+      <div class="candidate-prof-info">
+        <h2 class="green">{{ candidate.salary }}₸</h2>
+        <div class="cta">
+          <a
+            [title]="candidate.name + ' details'"
+            [routerLink]="['/candidate', candidate.id]"
+            >Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,64 @@
+<div class="candidate-details">
+  <div class="avatar">
+    <img
+      src="https://www.thispersondoesnotexist.com/image"
+      [style.background-color]="isOkay ? 'turquoise' : 'red'"
+    />
+    <h2>{{ isOkay ? "Подходит" : "Не подходит" }}</h2>
+  </div>
+  <div class="data">
+    <div class="info">
+      <h1>{{ candidate.name }}</h1>
+      <ul class="candidate-props-list">
+        <li class="candidate-prop">
+          Age: <strong>{{ candidate.age }} </strong>
+        </li>
+        <li class="candidate-prop">
+          Gender: <strong>{{ candidate.gender }} </strong>
+        </li>
+        <li class="candidate-prop">
+          Main language: <strong>{{ candidate.mainLang }}</strong>
+        </li>
+        <li class="candidate-prop">
+          Experience: <strong>{{ candidate.experience }} years</strong>
+        </li>
+        <li class="candidate-prop">
+          Wanted salary: <strong>{{ candidate.salary }} KZT</strong>
+        </li>
+        <li class="candidate-prop">
+          Ready to relocate:
+          <strong>{{ candidate.relocate ? "Yes" : "No" }}</strong>
+        </li>
+        <li class="candidate-prop">
+          <p>
+            Degree: <strong>{{ candidate.degree }}</strong>
+          </p>
+        </li>
+        <div class="about">
+          <h2>About me:</h2>
+          <p>
+            {{ candidate.recomendation }}
+          </p>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="metrics-container">
+  <div class="data metrics">
+    <div *ngFor="let mark of candidate.marks; let i = index" class="form-data">
+      <span> {{ mark.type }}: </span>
+      <select [(ngModel)]="candidateMarks[i].value">
+        <option
+          *ngFor="let value of values"
+          [selected]="value === mark.value"
+          [value]="value"
+        >
+          {{ value }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <button class="cta" (click)="updateCandidate()">Save</button>
+</div>

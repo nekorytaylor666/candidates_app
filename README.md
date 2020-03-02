@@ -8,5 +8,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Json Server
 
-To run simple json server with all data run `npm run json:server`.
-It runs on `http://localhost:3000/users`.
+Before running app you should start json server.
+To run it just execute `npm run json:server`.
+It works on `http://localhost:3000/users`.
